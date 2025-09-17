@@ -137,8 +137,8 @@ test_first_layer = False
 # else:
 device = torch.device("cpu")
 print('Using CPU')
-path = "/home/ni/Documents/artifact-cancellation/performance-metrics/BrainBERT/"
-ckpt_path = path + "pretrained_weights/stft_large_pretrained.pth"
+path = "models/BrainBERT_pretrained_weights/"
+ckpt_path = path + "stft_large_pretrained.pth"
 cfg = OmegaConf.create({"upstream_ckpt": ckpt_path})
 model = build_model(cfg)
 model.to(device)
